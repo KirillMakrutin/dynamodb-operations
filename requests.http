@@ -1,0 +1,31 @@
+# @no-log
+GET http://localhost:8080/api/v1/rates
+Accept: application/json
+
+###
+# @no-log
+GET http://localhost:8080/api/v1/rates/J22
+Accept: application/json
+
+###
+# @no-log
+GET http://localhost:8080/api/v1/rates/filter?filterDate=2022-01-15
+Accept: application/json
+
+
+###
+# @no-log
+DELETE http://localhost:8080/api/v1/rates
+Accept: application/json
+
+###
+# @no-log
+POST http://localhost:8080/api/v1/rates
+Content-Type: application/json
+
+{
+  "rateCode": "J22",
+  "amount": 5.56,
+  "startDate": "2022-01-01",
+  "endDate": "2022-02-01"
+}
